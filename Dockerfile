@@ -9,10 +9,11 @@ RUN yum -y install socat wget sudo net-tools less ca-certificates && yum -y clea
 # Run socat and DRM as unprivileged user
 USER drmuser
 
-# Create a volume to hold the downloaded objects
+# Create a volume to hold the downloaded objects and everything else
 VOLUME ["/var/dell/drm/"]
 
 COPY start.sh /
-CMD ["/start.sh"]
+#CMD ["/start.sh"]
 
 #CMD ["/opt/dell/dellemcrepositorymanager/DRMServiceInstall.sh"]
+CMD ["/opt/dell/dellemcrepositorymanager/DRM_Service.sh"]
