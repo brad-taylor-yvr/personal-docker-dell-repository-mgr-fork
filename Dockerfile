@@ -12,6 +12,7 @@ USER drmuser
 # Create a volume to hold the downloaded objects
 VOLUME ["/var/dell/drm/"]
 
-COPY start.sh /
+#COPY start.sh /
+#CMD ["/start.sh"]
 
-CMD ["/start.sh"]
+CMD ["/opt/dell/dellemcrepositorymanager/DRMServiceInstall.sh"]
